@@ -19,24 +19,23 @@ stages {
       scanLayers: true, 
       tag: 'latest'
       }
-    }
     stage('Stage Build') { 
-    steps {
+      steps {
         echo 'Build commands...'
       }
     }
     stage('Stage Deploy') { 
-    steps {
+      steps {
         echo 'Deploy commands...'
       }
     }
     stage('Stage Test') { 
-    steps {
+      steps {
         echo 'Test commands...'
       }
     }
     stage('Stage Release') { 
-    steps {
+      steps {
         echo 'Release commands...'
       }
     }
