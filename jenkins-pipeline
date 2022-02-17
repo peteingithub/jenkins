@@ -1,0 +1,44 @@
+pipeline {
+agent any
+stages {
+  stage('NV rmt Image Scan') { 
+    steps {
+      //nv jenkins plugin conf
+      neuvector nameOfVulnerabilityToExemptFour: '',
+      nameOfVulnerabilityToExemptOne: '', 
+      nameOfVulnerabilityToExemptThree: '', 
+      nameOfVulnerabilityToExemptTwo: '', 
+      nameOfVulnerabilityToFailFour: '', 
+      nameOfVulnerabilityToFailOne: '', 
+      nameOfVulnerabilityToFailThree: '', 
+      nameOfVulnerabilityToFailTwo: '', 
+      numberOfHighSeverityToFail: '400', 
+      numberOfMediumSeverityToFail: '400', 
+      registrySelection: 'rmt', 
+      repository: 'ubuntu', 
+      scanLayers: true, 
+      tag: 'latest'
+      }
+    }
+    stage('Stage Build') { 
+    steps {
+        echo 'Build commands...'
+      }
+    }
+    stage('Stage Deploy') { 
+    steps {
+        echo 'Deploy commands...'
+      }
+    }
+    stage('Stage Test') { 
+    steps {
+        echo 'Test commands...'
+      }
+    }
+    stage('Stage Release') { 
+    steps {
+        echo 'Release commands...'
+      }
+    }
+  }    
+}
