@@ -1,3 +1,3 @@
 # jenkins
-For testing Jenkins
+This is Git managed Jenkins pipeline configuration.
  
