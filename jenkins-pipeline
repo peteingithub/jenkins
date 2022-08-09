@@ -21,32 +21,32 @@ stages {
   }
   stage('Stage Image Scan') { 
     steps {
-      echo 'Build commands...'
+      echo 'Build commands ...'
     }
   }
   stage('Stage Build') { 
     steps {
-      echo 'Build commands...'
+      echo 'Build commands ...'
     }
   }
   stage('Stage Build 2') { 
     steps {
-      echo 'Build commands...'
+      echo 'Build commands ...'
     }
   }
   stage('Stage Deploy') { 
     steps {
-      echo 'Deploy commands...'
+      echo 'Deploy commands ...'
     }
   }
   stage('Stage Test') { 
     steps {
-      echo 'Test commands...'
+      echo 'Test commands ...'
     }
   }
   stage('Stage Release') { 
     steps {
-      echo 'Release commands...'
+      echo 'Release commands ...'
     }
   }    
 }
