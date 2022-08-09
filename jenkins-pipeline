@@ -28,6 +28,11 @@ stages {
         echo 'Build commands...'
       }
     }
+    stage('Stage Build 2') { 
+      steps {
+        echo 'Build commands...'
+      }
+    }
     stage('Stage Deploy') { 
       steps {
         echo 'Deploy commands...'
