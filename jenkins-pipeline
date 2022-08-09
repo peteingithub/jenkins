@@ -15,9 +15,9 @@ stages {
       numberOfHighSeverityToFail: '400', 
       numberOfMediumSeverityToFail: '400', 
       registrySelection: 'rmt', 
-      repository: 'ubuntu', 
+      repository: 'registry.suse.com', 
       scanLayers: true, 
-      tag: 'latest'
+      tag: '15.4'
       }
     stage('Stage Build') { 
       steps {
