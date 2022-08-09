@@ -1,7 +1,7 @@
 pipeline {
 agent any
 stages {
-  stage('NV rmt Image Scan') { 
+  stage('Image Scan') { 
     steps {
       //nv jenkins plugin conf
       neuvector nameOfVulnerabilityToExemptFour: '',
