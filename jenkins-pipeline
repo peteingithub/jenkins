@@ -3,7 +3,6 @@ agent any
 stages {
   stage('Image Scan') { 
     steps {
-      //nv jenkins plugin conf
       neuvector nameOfVulnerabilityToExemptFour: '',
       nameOfVulnerabilityToExemptOne: '', 
       nameOfVulnerabilityToExemptThree: '', 
@@ -18,7 +17,12 @@ stages {
       repository: "registry.suse.com/bci/bci-base", 
       scanLayers: true, 
       tag: "15.4"
+    }
+    stage('Stage Image Scan') { 
+      steps {
+        echo 'Build commands...'
       }
+    }
     stage('Stage Build') { 
       steps {
         echo 'Build commands...'
