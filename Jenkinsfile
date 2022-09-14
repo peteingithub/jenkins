@@ -18,7 +18,7 @@ pipeline {
         nameOfVulnerabilityToFailTwo: '', 
         numberOfHighSeverityToFail: '400', 
         numberOfMediumSeverityToFail: '400', 
-        registrySelection: 'rmt-private', 
+        registrySelection: 'rmt', 
         repository: "registry.suse.com/bci/bci-base", 
         scanLayers: true, 
         tag: "15.4"
