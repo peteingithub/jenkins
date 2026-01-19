@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Stage 2: Build a new Container Image') { 
       steps {
-        echo "Build command: \ndockerapp = docker.build('gabriellins/api-produto:latest', '-f ./src/Dockerfile ./src')"
+        echo "Build command: \ndockerapp = docker.build('private-registry/app-image:latest', '-f ./src/Dockerfile ./src')"
       }
     }
     stage('Stage 3: Pushing the Image to the Registry') { 
