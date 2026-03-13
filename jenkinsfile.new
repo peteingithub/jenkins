@@ -19,7 +19,7 @@ pipeline {
         numberOfHighSeverityToFail: '400', 
         numberOfMediumSeverityToFail: '400', 
         registrySelection: 'docker-hub', 
-        repository: "neuvector", 
+        repository: "peteindockerhub/neuvector", 
         scanLayers: true, 
         tag: "15.7"
       }  
