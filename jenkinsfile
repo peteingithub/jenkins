@@ -18,10 +18,10 @@ pipeline {
         nameOfVulnerabilityToFailTwo: '', 
         numberOfHighSeverityToFail: '400', 
         numberOfMediumSeverityToFail: '400', 
-        registrySelection: 'rmt', 
+        registrySelection: 'docker-hub', 
         repository: "registry.suse.com/bci/bci-base", 
         scanLayers: true, 
-        tag: "15.4"
+        tag: "15.7"
       }  
     }
     stage('Build') { 
