@@ -19,9 +19,9 @@ pipeline {
         numberOfHighSeverityToFail: '400', 
         numberOfMediumSeverityToFail: '400', 
         registrySelection: 'docker-hub', 
-        repository: "repository/docker/peteindockerhub/neuvector/general", 
+        repository: "peteindockerhub/neuvector", 
         scanLayers: true, 
-        tag: "15.7"
+        tag: "1.0.2"
       }  
     }
     stage('Build') { 
