@@ -10,13 +10,9 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                /* In this version of the plugin:
-                   'name' maps to the Controller Nickname
-                   'registry' maps to the Registry Config Name
-                */
-                neuvector name: 'nvcontroller',
-                          registry: 'sec201-registry',
-                          repository: 'peteindockerhub/hello-susecon-appco',
+                // We removed 'name', 'scanner', 'controller', and 'registry'
+                // These are the only parameters your plugin version accepts here
+                neuvector repository: 'peteindockerhub/hello-susecon-appco',
                           tag: 'v0.01',
                           scanLayers: true,
                           numberOfHighSeverityToFail: '400',
