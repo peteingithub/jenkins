@@ -1,13 +1,9 @@
 pipeline {
     agent any
-
     stages {
         stage('Pre Scan') {
-            steps {
-                echo 'Pre Scan commands ...'
-            }
+            steps { echo 'Pre Scan commands ...' }
         }
-
         stage('Image Scan') {
             steps {
                 neuvector controllerEndpointUrlSelection: 'nvcontroller',
@@ -19,21 +15,7 @@ pipeline {
                           numberOfMediumSeverityToFail: '400'
             }
         }
-
-        stage('Build') {
-            steps { echo 'Build commands ...' }
-        }
-
-        stage('Deploy') {
-            steps { echo 'Deploy commands ...' }
-        }
-
-        stage('Test') {
-            steps { echo 'Test commands ...' }
-        }
-
-        stage('Release') {
-            steps { echo 'Release commands ...' }
-        }
+        stage('Build') { steps { echo 'Build commands ...' } }
+        stage('Deploy') { steps { echo 'Deploy commands ...' } }
     }
 }
