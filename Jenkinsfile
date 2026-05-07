@@ -13,7 +13,7 @@ pipeline {
                 // We removed 'controller', 'scanner', and 'name'
                 // The plugin will automatically use the Controller defined in Global Settings
                 neuvector registrySelection: 'sec201-registry',
-                          repository: 'peteindockerhub/hello-susecon',
+                          repository: 'peteindockerhub',
                           tag: '1.0.2',
                           scanLayers: true,
                           numberOfHighSeverityToFail: '400',
