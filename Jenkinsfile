@@ -11,8 +11,8 @@ pipeline {
                           repository: 'peteindockerhub/hello-susecon-appco',
                           tag: 'v0.01',
                           scanLayers: true,
-                          numberOfHighSeverityToFail: '400',
-                          numberOfMediumSeverityToFail: '400'
+                          numberOfHighSeverityToFail: '10',
+                          numberOfMediumSeverityToFail: '100'
             }
         }
         stage('Build') { steps { echo 'Build commands ...' } }
