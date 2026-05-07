@@ -8,20 +8,22 @@ pipeline {
     }
     stage('Image Scan') { 
       steps {
-        neuvector nameOfVulnerabilityToExemptFour: '',
-        nameOfVulnerabilityToExemptOne: '', 
-        nameOfVulnerabilityToExemptThree: '', 
-        nameOfVulnerabilityToExemptTwo: '', 
-        nameOfVulnerabilityToFailFour: '', 
-        nameOfVulnerabilityToFailOne: '', 
-        nameOfVulnerabilityToFailThree: '', 
-        nameOfVulnerabilityToFailTwo: '', 
-        numberOfHighSeverityToFail: '400', 
-        numberOfMediumSeverityToFail: '400', 
-        registrySelection: 'sec201-registry', 
-        repository: "peteindockerhub/hello-susecon", 
-        scanLayers: true, 
-        tag: "1.0.2"
+        // We added the scannerSelection line to link to your Global Config Nickname
+        neuvector scannerSelection: 'NV_Controller', 
+                  registrySelection: 'sec201-registry', 
+                  repository: "peteindockerhub/hello-susecon", 
+                  tag: "1.0.2",
+                  scanLayers: true, 
+                  numberOfHighSeverityToFail: '400', 
+                  numberOfMediumSeverityToFail: '400',
+                  nameOfVulnerabilityToExemptOne: '', 
+                  nameOfVulnerabilityToExemptTwo: '', 
+                  nameOfVulnerabilityToExemptThree: '', 
+                  nameOfVulnerabilityToExemptFour: '', 
+                  nameOfVulnerabilityToFailOne: '', 
+                  nameOfVulnerabilityToFailTwo: '', 
+                  nameOfVulnerabilityToFailThree: '', 
+                  nameOfVulnerabilityToFailFour: ''
       }  
     }
     stage('Build') { 
