@@ -10,8 +10,6 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                // controllerEndpointUrlSelection maps to the Nickname 'nvcontroller'
-                // registrySelection maps to the Registry Name 'sec201-registry'
                 neuvector controllerEndpointUrlSelection: 'nvcontroller',
                           registrySelection: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon-appco',
@@ -23,27 +21,19 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo 'Build commands ...'
-            }
+            steps { echo 'Build commands ...' }
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploy commands ...'
-            }
+            steps { echo 'Deploy commands ...' }
         }
 
         stage('Test') {
-            steps {
-                echo 'Test commands ...'
-            }
+            steps { echo 'Test commands ...' }
         }
 
         stage('Release') {
-            steps {
-                echo 'Release commands ...'
-            }
+            steps { echo 'Release commands ...' }
         }
     }
 }
