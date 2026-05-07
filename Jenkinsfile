@@ -8,8 +8,9 @@ pipeline {
     }
     stage('Image Scan') { 
       steps {
-        neuvector scanner: 'NV_Controller', 
-                  registrySelection: 'sec201-registry', 
+        // We removed scanner: 'NV_Controller'. 
+        // Jenkins will use the global default controller automatically.
+        neuvector registrySelection: 'sec201-registry', 
                   repository: "peteindockerhub/hello-susecon", 
                   tag: "1.0.2",
                   scanLayers: true, 
