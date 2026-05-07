@@ -10,10 +10,9 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                // 'controller' maps to the Nickname in your Global Settings
-                // 'registrySelection' maps to the Registry Name in Global Registry Config
-                neuvector controller: 'NV_Controller',
-                          registrySelection: 'sec201-registry',
+                // We removed 'controller', 'scanner', and 'name'
+                // The plugin will use the Controller configured in Global System settings by default
+                neuvector registrySelection: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon',
                           tag: '1.0.2',
                           scanLayers: true,
