@@ -13,6 +13,7 @@ pipeline {
                 // We removed 'controller', 'scanner', and 'name'
                 // The plugin will use the Controller configured in Global System settings by default
                 neuvector registrySelection: 'sec201-registry',
+                          controller: 'NV_Controller',
                           repository: 'peteindockerhub',
                           tag: '1.0.2',
                           scanLayers: true,
