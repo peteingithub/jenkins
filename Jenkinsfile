@@ -10,24 +10,16 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                /* scannerSelection: matches the 'Nickname' in Global System Config
-                  registrySelection: matches the 'Registry Name' in Global Registry Config
+                /* Using 'name' to map to the Controller Nickname 
+                  and 'registry' to map to the Registry Name.
                 */
-                neuvector scannerSelection: 'NV_Controller',
-                          registrySelection: 'sec201-registry',
+                neuvector name: 'NV_Controller',
+                          registry: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon',
                           tag: '1.0.2',
                           scanLayers: true,
                           numberOfHighSeverityToFail: '400',
-                          numberOfMediumSeverityToFail: '400',
-                          nameOfVulnerabilityToExemptOne: '',
-                          nameOfVulnerabilityToExemptTwo: '',
-                          nameOfVulnerabilityToExemptThree: '',
-                          nameOfVulnerabilityToExemptFour: '',
-                          nameOfVulnerabilityToFailOne: '',
-                          nameOfVulnerabilityToFailTwo: '',
-                          nameOfVulnerabilityToFailThree: '',
-                          nameOfVulnerabilityToFailFour: ''
+                          numberOfMediumSeverityToFail: '400'
             }
         }
 
