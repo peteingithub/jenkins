@@ -10,13 +10,24 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                // registrySelection is the REQUIRED link to your Global Config
-                neuvector registrySelection: 'sec201-registry',
+                /* controllerEndpointUrlSelection: Maps to your Controller Nickname
+                   registrySelection: Maps to your Registry Config Nickname
+                */
+                neuvector controllerEndpointUrlSelection: 'nvcontroller',
+                          registrySelection: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon-appco',
                           tag: 'v0.01',
                           scanLayers: true,
                           numberOfHighSeverityToFail: '400',
-                          numberOfMediumSeverityToFail: '400'
+                          numberOfMediumSeverityToFail: '400',
+                          nameOfVulnerabilityToExemptOne: '',
+                          nameOfVulnerabilityToExemptTwo: '',
+                          nameOfVulnerabilityToExemptThree: '',
+                          nameOfVulnerabilityToExemptFour: '',
+                          nameOfVulnerabilityToFailOne: '',
+                          nameOfVulnerabilityToFailTwo: '',
+                          nameOfVulnerabilityToFailThree: '',
+                          nameOfVulnerabilityToFailFour: ''
             }
         }
 
@@ -29,6 +40,18 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy commands ...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Test commands ...'
+            }
+        }
+
+        stage('Release') {
+            steps {
+                echo 'Release commands ...'
             }
         }
     }
