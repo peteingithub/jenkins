@@ -10,11 +10,10 @@ pipeline {
 
         stage('Image Scan') {
             steps {
-                /* Using 'name' to map to the Controller Nickname 
-                  and 'registry' to map to the Registry Name.
-                */
-                neuvector name: 'NV_Controller',
-                          registry: 'sec201-registry',
+                // 'controller' maps to the Nickname in your Global Settings
+                // 'registrySelection' maps to the Registry Name in Global Registry Config
+                neuvector controller: 'NV_Controller',
+                          registrySelection: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon',
                           tag: '1.0.2',
                           scanLayers: true,
@@ -24,27 +23,19 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo 'Build commands ...'
-            }
+            steps { echo 'Build commands ...' }
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploy commands ...'
-            }
+            steps { echo 'Deploy commands ...' }
         }
 
         stage('Test') {
-            steps {
-                echo 'Test commands ...'
-            }
+            steps { echo 'Test commands ...' }
         }
 
         stage('Release') {
-            steps {
-                echo 'Release commands ...'
-            }
+            steps { echo 'Release commands ...' }
         }
     }
 }
