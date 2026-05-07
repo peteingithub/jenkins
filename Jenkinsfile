@@ -12,7 +12,7 @@ pipeline {
             steps {
                 // We removed 'controller', 'scanner', and 'name'
                 // The plugin will automatically use the Controller defined in Global Settings
-                neuvector scanner: 'NV_Controller',
+                neuvector scanner: 'nvcontroller',
                           registrySelection: 'sec201-registry',
                           repository: 'peteindockerhub/hello-susecon-appco',
                           tag: 'v0.01',
