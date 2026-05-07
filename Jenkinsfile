@@ -18,8 +18,8 @@ pipeline {
         nameOfVulnerabilityToFailTwo: '', 
         numberOfHighSeverityToFail: '400', 
         numberOfMediumSeverityToFail: '400', 
-        registrySelection: 'docker-hub', 
-        repository: "peteindockerhub/neuvector", 
+        registrySelection: 'sec201-registry', 
+        repository: "peteindockerhub/hello-susecon", 
         scanLayers: true, 
         tag: "1.0.2"
       }  
