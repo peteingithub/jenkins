@@ -16,7 +16,7 @@ pipeline {
         nameOfVulnerabilityToFailOne: '', 
         nameOfVulnerabilityToFailThree: '', 
         nameOfVulnerabilityToFailTwo: '', 
-        numberOfHighSeverityToFail: '10', 
+        numberOfHighSeverityToFail: '2', 
         numberOfMediumSeverityToFail: '10', 
         registrySelection: 'rmt', 
         repository: "registry.suse.com/bci/bci-base", 
