@@ -18,10 +18,10 @@ pipeline {
         nameOfVulnerabilityToFailTwo: '', 
         numberOfHighSeverityToFail: '2', 
         numberOfMediumSeverityToFail: '10', 
-        registrySelection: 'rmt', 
-        repository: "registry.suse.com/bci/bci-base", 
+        registrySelection: 'sec201-registry', 
+        repository: "peteindockerhub/hello-susecon-appco", 
         scanLayers: true, 
-        tag: "15.7"
+        tag: "v0.01"
       }  
     }
     stage('Build') { 
